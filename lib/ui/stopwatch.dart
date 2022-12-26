@@ -3,11 +3,12 @@ import 'package:flutter/scheduler.dart';
 import 'package:stopwatch/ui/reset_button.dart';
 import 'package:stopwatch/ui/start_stop_button.dart';
 import 'package:stopwatch/ui/stopwatch_renderer.dart';
-// import 'package:stopwatch/ui/elapsed_time_text_basic.dart';
 import 'dart:async';
 import 'elapsed_time_text.dart';
 
 class Stopwatch extends StatefulWidget {
+  const Stopwatch({super.key});
+
   @override
   _StopwatchState createState() => _StopwatchState();
 }
@@ -23,7 +24,7 @@ class _StopwatchState extends State<Stopwatch>
   @override
   void initState() {
     super.initState();
-    _ticker = this.createTicker((elapsed) {
+    _ticker = createTicker((elapsed) {
       setState(() {
         _currentlyElapsed = elapsed;
       });

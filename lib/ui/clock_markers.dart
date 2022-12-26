@@ -1,7 +1,4 @@
 import 'dart:math';
-
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class ClockSecondsTickMarker extends StatelessWidget {
@@ -62,7 +59,7 @@ class ClockTextMarker extends StatelessWidget {
         height: height,
         child: Text(
           value.toString(),
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 24,
           ),
           textAlign: TextAlign.center,

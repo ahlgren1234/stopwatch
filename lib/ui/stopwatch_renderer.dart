@@ -1,8 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:stopwatch/ui/clock_hand.dart';
 import 'package:stopwatch/ui/clock_markers.dart';
 import 'package:stopwatch/ui/elapsed_time_text.dart';
