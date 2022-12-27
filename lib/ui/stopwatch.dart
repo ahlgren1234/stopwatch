@@ -6,6 +6,8 @@ import 'package:stopwatch/ui/stopwatch_renderer.dart';
 import 'dart:async';
 import 'elapsed_time_text.dart';
 
+import 'package:audioplayers/audioplayers.dart';
+
 class Stopwatch extends StatefulWidget {
   const Stopwatch({super.key});
 
@@ -40,6 +42,7 @@ class _StopwatchState extends State<Stopwatch>
   void _toggleRunning() {
     setState(() {
       _isRunning = !_isRunning;
+      AudioPlayer().play(AssetSource('audio/button-beep.mp3'));
       if (_isRunning) {
         _ticker.start();
       } else {
@@ -52,6 +55,7 @@ class _StopwatchState extends State<Stopwatch>
 
   void _reset() {
     _ticker.stop();
+    AudioPlayer().play(AssetSource('audio/button-beep.mp3'));
     setState(() {
       _isRunning = false;
       _previouslyElapsed = Duration.zero;
